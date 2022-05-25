@@ -60,9 +60,10 @@ function Pays() {
 
     console.log(listePays);
 
-    {listePays.map((data) => {
-        return (
-            <div>
+    return (
+        <div>           
+         {listePays.map((data) => {
+            return (<div>
                 <table class="table" style={{ textAlign: "center" }}>
                     <thead>
                         <tr>
@@ -76,12 +77,18 @@ function Pays() {
                             <th scope="row">{data.code_pays}</th>
                             <td>{data.nom}</td>
                             <td>{data.description_pays}</td>
+
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        );
-    })}
+            </div>);
+        })}
+        </div>
+
+    )
+
+
+
 }
 
 function Membre() {
@@ -106,7 +113,24 @@ function Membre() {
 }
 
 function Reclamation() {
-    return <h1>Liste des reclamations</h1>
+    return (<div>
+        <table class="table" style={{ textAlign: "center" }}>
+            <thead>
+                <tr>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>)
 }
 
 export default Affichage;
